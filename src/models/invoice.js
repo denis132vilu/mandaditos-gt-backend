@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
@@ -19,7 +19,7 @@ const InvoiceSchema = Schema({
     }],
     discount: Number,
     total: Number,
-    order: { type: Schema.ObjectId, ref: 'Order' }
+    order: { type: Schema.Types.ObjectId, ref: 'Order' }
 });
 
 module.exports = mongoose.model("Invoice", InvoiceSchema);

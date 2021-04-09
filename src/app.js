@@ -5,6 +5,9 @@ const express   = require('express');
 const app       = express();
 const cors      = require('cors');
 
+// CONTROLLERS
+const userController = require('./controllers/user');
+
 // MIDDLEWARES
 app.disable('x-powered-by');
 app.use(express.urlencoded({ extended: false }));
@@ -37,7 +40,7 @@ app.get('/', (req, res) => {
 });
 
 // CONTROLLERS
-
+userController.createDefaultUsers().then(() => { });
 
 // ROUTES
 

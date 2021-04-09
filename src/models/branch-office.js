@@ -12,7 +12,7 @@ const BranchOfficeSchema = Schema({
     latitude: String,
     nit: String,
     qualification: Number,
-    shop: { type: Schema.ObjectId, ref: 'Shop' },
+    shop: { type: Schema.Types.ObjectId, ref: 'Shop' },
 });
 
 module.exports = mongoose.model('BranchOffice', BranchOfficeSchema);

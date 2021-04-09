@@ -13,7 +13,7 @@ const UserSchema = Schema({
     postalCode:     String,
     address:        String,
     nit:            String,
-    role:           String,
+    role:           Number,
     image:          String,
 });
 
